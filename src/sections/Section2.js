@@ -44,6 +44,7 @@ const Section2 = () => {
     <div className="grid grid-cols-11 h-screen border-bottom-black text-center">
       <img
         src={img1}
+        alt="/"
         className="col-span-3 border-right-black h-full hidden lg:block"
       ></img>
       <div className="col-span-11 lg:col-span-5 border-right-black relative ">
@@ -69,10 +70,13 @@ const Section2 = () => {
           See More
         </Link>
       </div>
-      <img
-        src={projects[currentIndex].imgUrl}
-        className="lg:col-span-3 h-full hidden lg:block"
-      ></img>
+      <div className="lg:col-span-3 h-full w-full hidden lg:block">
+        <img
+          alt="/"
+          src={projects[currentIndex].imgUrl}
+          className="object-contain w-full h-full"
+        ></img>
+      </div>
     </div>
   );
 };

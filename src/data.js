@@ -8,6 +8,7 @@ import mg from "./asset/image/skills/mg.png";
 import node from "./asset/image/skills/node.png";
 import react from "./asset/image/skills/react.png";
 import tw from "./asset/image/skills/tw.png";
+import portfolio from "./asset/image/projects/portfolio.png";
 export const projects = [
   {
     name: "TinyZone-clone",
@@ -29,7 +30,7 @@ export const projects = [
   },
   {
     name: "Personal Portfolio",
-    imgUrl: html,
+    imgUrl: portfolio,
     description: "",
     technology: "",
   },

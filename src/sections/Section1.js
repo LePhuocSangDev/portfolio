@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import img1 from "../asset/image/img1.jpg";
 import { Link } from "react-router-dom";
 import { Hello } from "../riveAnimation/Hello";
+import { init } from "ityped";
 
 const Section1 = () => {
   return (
@@ -10,7 +11,9 @@ const Section1 = () => {
       <div className="lg:col-span-5 col-span-12 border-right-black flex justify-center items-center relative">
         <div>
           <h1 className="text-[40px] mb-10">Hello, I'm Le Phuoc Sang</h1>
-          <h3 className="text-[25px]">a front-end developer</h3>
+          <h3 className="text-[25px]">
+            a <span className="text-[#eb0808]">Front-end Developer</span>
+          </h3>
         </div>
         <Link className="button bg-black button-position" to="/about">
           See More
