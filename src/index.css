@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
+
+body {
+  font-family: 'Edu TAS Beginner', cursive;
+}
+
+@layer base {
+  h2 {
+    @apply text-2xl;
+  }
+}
+
+.border-right-black {
+  @apply lg:border-r-black lg:border-r-[3px]
+}
+
+.border-bottom-black {
+  @apply border-b-[3px] border-b-black 
+}
+.border-top-black {
+  @apply border-t-[3px] border-t-black 
+}
+
+.center-div {
+  @apply top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] absolute
+}
+
+.button {
+  @apply text-white lg:py-1 py-2 px-8 cursor-pointer hover:bg-slate-500
+}
+
+.button-position {
+  @apply top-[80%] transform translate-x-[-50%] left-[50%] absolute
+}
+
+.fade-anim {
+  animation: fadeAnim 1s ease-out;
+}
+
+@keyframes fadeAnim {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1;
+  }
+}
