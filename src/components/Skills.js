@@ -1,5 +1,4 @@
 import React from "react";
-import img1 from "../asset/image/img1.jpg";
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 import { skills } from "../data";
 import AnimationPage from "../riveAnimation/AnimationPage";

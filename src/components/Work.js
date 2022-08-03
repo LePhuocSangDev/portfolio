@@ -12,13 +12,13 @@ const Work = () => {
   return (
     <AnimationPage>
       <div>
-        <div className="lg:grid lg:grid-cols-12 lg:h-screen">
+        <div className="lg:grid lg:grid-cols-12 lg:h-[70vh]">
           <img
-            className="w-full h-[50vh] lg:h-screen lg:col-span-7"
+            className="w-full h-[50vh] lg:h-[70vh] lg:col-span-7"
             src={img1}
             alt=""
           />
-          <div className="lg:col-span-5 p-16 relative ">
+          <div className="lg:col-span-5 p-32 relative ">
             <h1 className="text-4xl py-4">
               Project that I currently working on
             </h1>
@@ -30,7 +30,7 @@ const Work = () => {
             </p>{" "}
             <button
               onClick={open}
-              className="button bg-black button-position my-8"
+              className="button bg-black button-position top-[90%]"
             >
               See More
             </button>

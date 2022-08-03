@@ -14,7 +14,7 @@ const Modal = ({ show, setShow }) => {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="bg-white w-[80%] h-[70%] lg:w-[85%] lg:h-[80%] relative px-4"
+        className="bg-white rounded-[10px] w-[80%] h-[85%] lg:w-[85%] lg:h-[80%] relative px-4"
       >
         <button
           onClick={close}
@@ -55,8 +55,8 @@ const Modal = ({ show, setShow }) => {
             </div>
           </div>
         </div>
-        <a className="button bg-black absolute top-[85%] left-[5%]">Demo</a>
-        <a className="button bg-black absolute top-[85%] right-[5%]">
+        <a className="button bg-black absolute top-[90%] left-[5%]">Demo</a>
+        <a className="button bg-black absolute top-[90%] right-[5%]">
           Source code
         </a>
       </div>

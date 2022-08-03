@@ -18,7 +18,7 @@ function App() {
     }, 3000);
   }, []);
   return (
-    <div className="App">
+    <div className={`${loader || "App"}`}>
       {loader && <Loader />}
       {!loader && (
         <>

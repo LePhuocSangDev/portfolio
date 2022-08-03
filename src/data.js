@@ -1,13 +1,13 @@
-import html from "./asset/image/html.PNG";
-import css from "./asset/image/css.png";
-import sass from "./asset/image/sass.PNG";
-import ex from "./asset/image/ex.png";
-import bt from "./asset/image/bt.PNG";
-import js from "./asset/image/js.PNG";
-import mg from "./asset/image/mg.png";
-import node from "./asset/image/node.png";
-import react from "./asset/image/react.png";
-import tw from "./asset/image/tw.png";
+import html from "./asset/image/skills/html.PNG";
+import css from "./asset/image/skills/css.png";
+import sass from "./asset/image/skills/sass.PNG";
+import ex from "./asset/image/skills/ex.png";
+import bt from "./asset/image/skills/bt.PNG";
+import js from "./asset/image/skills/js.PNG";
+import mg from "./asset/image/skills/mg.png";
+import node from "./asset/image/skills/node.png";
+import react from "./asset/image/skills/react.png";
+import tw from "./asset/image/skills/tw.png";
 export const projects = [
   {
     name: "TinyZone-clone",

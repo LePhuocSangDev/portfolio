@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import img1 from "../asset/image/img1.jpg";
-import img2 from "../asset/image/img2.jpg";
+import img2 from "../asset/image/sections/img2.jpg";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { projects } from "../data";

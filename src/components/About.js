@@ -8,11 +8,11 @@ const About = () => {
     <AnimationPage>
       <div className="p-8 lg:p-16">
         <div>
-          <h3 className="text-6xl mb-4">BIO</h3>
-          <h4>Personal Life</h4>
-          <div className="flex flex-col mt-12 mb-24 lg:flex-row">
+          <h3 className="text-6xl mb-4 text-center">BIO</h3>
+          <h4 className="text-center">Personal Life</h4>
+          <div className="flex flex-col mt-12 mb-24 lg:flex-row items-center ">
             <img
-              className="w-full lg:w-[330px] lg:h-[250px] "
+              className="w-full max-w-[500px] lg:w-full lg:h-[300px] lg:ml-8 xl:ml-32"
               src={mypicture}
               alt=""
             />
@@ -30,7 +30,7 @@ const About = () => {
               </p>
               <a
                 href="#"
-                className="bg-[#5A7A81] inline-flex justify-center items-center px-4 py-2 text-white my-2 w-full lg:justify-between lg:w-[30%] mt-8"
+                className="bg-[#5A7A81] inline-flex justify-center items-center px-4 py-2 text-white my-2 w-full lg:justify-between lg:w-[180px] mt-8"
               >
                 Download CV{" "}
                 <i className="ml-2">

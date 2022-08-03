@@ -1,5 +1,5 @@
 import React from "react";
-import img2 from "../asset/image/img2.jpg";
+import img1 from "../asset/image/img1.jpg";
 import { Link } from "react-router-dom";
 import { Hello } from "../riveAnimation/Hello";
 
@@ -16,7 +16,11 @@ const Section1 = () => {
           See More
         </Link>
       </div>
-      <img className="col-span-3 h-full hidden lg:block" src={img2} alt="" />
+      <img
+        className="col-span-3 h-full hidden lg:block aspect-video"
+        src={img1}
+        alt=""
+      />
     </div>
   );
 };
