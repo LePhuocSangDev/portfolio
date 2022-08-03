@@ -9,7 +9,7 @@ const Section1 = () => {
       <Hello />
       <div className="lg:col-span-5 col-span-12 border-right-black flex justify-center items-center relative">
         <div>
-          <h1 className="text-[40px] mb-10">Hi, I'm Le Phuoc Sang</h1>
+          <h1 className="text-[40px] mb-10">Hello, I'm Le Phuoc Sang</h1>
           <h3 className="text-[25px]">a front-end developer</h3>
         </div>
         <Link className="button bg-black button-position" to="/about">
