@@ -15,14 +15,14 @@ body {
 }
 
 .border-right-black {
-  @apply lg:border-r-black lg:border-r-[3px]
+  @apply lg:border-r-black lg:border-r-[3px] dark:border-r-white
 }
 
 .border-bottom-black {
-  @apply border-b-[3px] border-b-black 
+  @apply border-b-[3px] border-b-black  dark:border-b-white
 }
 .border-top-black {
-  @apply border-t-[3px] border-t-black 
+  @apply border-t-[3px] border-t-black dark:border-t-white
 }
 
 .center-div {
@@ -30,12 +30,14 @@ body {
 }
 
 .button {
-  @apply text-white lg:py-1 py-2 px-6 cursor-pointer hover:bg-slate-500
+  @apply text-white lg:py-1 py-2 px-6 cursor-pointer hover:bg-[#000] hover:shadow-neon bg-[#d89414]
+ ;
 }
 
 .button-position {
   @apply lg:top-[80%] top-[75%] transform translate-x-[-50%] left-[50%] absolute
 }
+
 
 .fade-anim {
   animation: fadeAnim 1s ease-out;

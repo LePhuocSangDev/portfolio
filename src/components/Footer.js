@@ -1,10 +1,22 @@
 import React from "react";
 import { FaFacebookF } from "react-icons/fa";
-import { AiFillGithub, AiFillLinkedin, AiOutlineTwitter } from "react-icons/ai";
+import {
+  AiFillGithub,
+  AiFillLinkedin,
+  AiOutlineTwitter,
+  AiOutlineArrowUp,
+} from "react-icons/ai";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <div className="flex flex-col justify-center items-center border-t-[3px]  border-t-black">
+    <div className="flex flex-col justify-center items-center border-top-black">
       <div className="flex text-[40px] my-4">
         <a
           className="px-2"
@@ -32,6 +44,9 @@ const Footer = () => {
         <span>phuocsangb8@gmail.com |</span>
         <span className="px-2">036-666-6390</span>
       </div>
+      <button onClick={scrollToTop} className="button absolute p-0 right-[5px]">
+        <AiOutlineArrowUp />
+      </button>
     </div>
   );
 };

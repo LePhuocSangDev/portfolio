@@ -1,69 +1,76 @@
 import React, { useState } from "react";
-import img1 from "../asset/image/img1.jpg";
 import Modal from "./Modal";
 import { projects } from "../data";
-import AnimationPage from "../riveAnimation/AnimationPage";
+import AnimationPage from "../animation/AnimationPage";
+import { useTranslation } from "react-i18next";
 
 const Work = () => {
+  const { t } = useTranslation();
   const [show, setShow] = useState(false);
-  const open = () => {
+  const currentProject = projects[0];
+  const lng = localStorage.getItem("lng");
+  const [projectDetails, setProjectDetails] = useState({});
+  const openModal = (project) => {
     setShow(true);
+    setProjectDetails(project);
   };
+
   return (
     <AnimationPage>
       <div>
         <div className="lg:grid lg:grid-cols-12 lg:h-[70vh]">
           <img
             className="w-full h-[50vh] lg:h-[70vh] lg:col-span-7"
-            src={img1}
+            src={currentProject.imgUrl}
             alt=""
           />
-          <div className="lg:col-span-5 p-32 relative ">
+          <div className="lg:col-span-5 p-12 relative ">
             <h1 className="text-4xl py-4">
-              Project that I currently working on
+              {t("Project that I currently working on")}
             </h1>
             <h3 className="text-2xl py-4 italic font-extrabold">
-              Netflix Clone
+              {currentProject.name}
             </h3>
             <p className="text-md py-4 italic font-thin text-lg">
-              Subscribe to our newsletter to receive news and updates.{" "}
-            </p>{" "}
+              {lng === "en" ? currentProject.desc : currentProject.desc_vn}
+            </p>
             <button
-              onClick={open}
-              className="button bg-black button-position top-[90%]"
+              onClick={() => openModal(currentProject)}
+              className="button absolute left-1/2 translate-x-[-50%]"
             >
-              See More
+              {t("See more")}
             </button>
           </div>
         </div>
         <div className="text-center w-screen p-8  lg:p-16">
-          <h1 className="text-4xl my-8">My Projects</h1>
-          <p className="inline-block lg:w-[50%] mt-8 mb-16 text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-            nobis explicabo reiciendis? Molestias labore assumenda eum est
-            asperiores. Aperiam, dolor?
+          <h1 className="text-4xl my-8"> {t("My project")}</h1>
+          <p className="inline-block lg:w-[50%] mt-8 mb-8 text-lg">
+            {t("My project description")}
           </p>
           <div className="grid lg:grid-cols-4 grid-cols-1 gap-8">
             {projects.map((project) => (
               <div
                 key={project.name}
-                className="col-span-1 relative shadow-2xl py-8 "
+                className="col-span-1 relative shadow-3xl px-2 py-8 bg-[#c6c9cf] rounded-xl "
               >
                 <img
                   className="w-[130px] h-[130px] rounded-[50%] m-auto"
                   src={project.imgUrl}
                   alt=""
                 />
-                <h2 className="my-8">{project.name}</h2>
+                <h2 className="my-8 text-black">{project.name}</h2>
                 <p className="text-justify">{project.description}</p>
-                <button onClick={open} className="button bg-black mt-8">
-                  More details
+                <button
+                  onClick={() => openModal(project)}
+                  className="button bg-black mt-8 lg:m-0"
+                >
+                  {t("More Details")}
                 </button>
               </div>
             ))}
           </div>
         </div>
-        <Modal show={show} setShow={setShow} />
+        <Modal show={show} setShow={setShow} projectDetails={projectDetails} />
       </div>
     </AnimationPage>
   );

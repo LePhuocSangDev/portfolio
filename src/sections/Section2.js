@@ -1,13 +1,14 @@
 import React, { useEffect, useState, useRef } from "react";
 import img1 from "../asset/image/img1.jpg";
-import img2 from "../asset/image/sections/img2.jpg";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { projects } from "../data";
+import { useTranslation } from "react-i18next";
 let count = 0;
 let slideInterval;
 
 const Section2 = () => {
+  const { t } = useTranslation();
   const slideRef = useRef();
   const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
@@ -18,7 +19,7 @@ const Section2 = () => {
     return () => {
       pauseSlider();
     };
-  }, []);
+  });
   const startSlider = () => {
     slideInterval = setInterval(() => {
       nextSlide();
@@ -48,7 +49,7 @@ const Section2 = () => {
         className="col-span-3 border-right-black h-full hidden lg:block"
       ></img>
       <div className="col-span-11 lg:col-span-5 border-right-black relative ">
-        <h2 className=" mt-8">MY WORK</h2>
+        <h2 className=" mt-8">{t("Work")}</h2>
         <i
           onClick={prevSlide}
           className="absolute top-[50%] left-[10%] text-3xl cursor-pointer"
@@ -67,14 +68,14 @@ const Section2 = () => {
           <AiOutlineArrowRight />
         </i>
         <Link to="/work" className="button bg-black button-position">
-          See More
+          {t("See more")}
         </Link>
       </div>
       <div className="lg:col-span-3 h-full w-full hidden lg:block">
         <img
           alt="/"
           src={projects[currentIndex].imgUrl}
-          className="object-contain w-full h-full"
+          className="w-full h-full"
         ></img>
       </div>
     </div>

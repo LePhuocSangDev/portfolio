@@ -7,7 +7,7 @@ import Contact from "./components/Contact";
 import Skills from "./components/Skills";
 import Work from "./components/Work";
 import { Routes, Route } from "react-router-dom";
-import { Loader } from "./riveAnimation/Hello";
+import { Loader } from "./animation/RiveAnimation";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -15,13 +15,13 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoader(false);
-    }, 3000);
+    }, 1250);
   }, []);
   return (
-    <div className={`${loader || "App"}`}>
+    <div className={`${loader || "App dark:border-white"}`}>
       {loader && <Loader />}
       {!loader && (
-        <>
+        <div className="dark:bg-black dark:text-white">
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -31,7 +31,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />
-        </>
+        </div>
       )}
     </div>
   );

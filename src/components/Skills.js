@@ -1,25 +1,24 @@
 import React from "react";
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 import { skills } from "../data";
-import AnimationPage from "../riveAnimation/AnimationPage";
+import AnimationPage from "../animation/AnimationPage";
+import { useTranslation } from "react-i18next";
 
 const Skills = () => {
+  const { t } = useTranslation();
   return (
     <AnimationPage>
       <div className="text-center my-8 mx-8 lg:mx-16">
-        <p className="text-5xl my-8 ">My Skills</p>
+        <p className="text-5xl my-8 ">{t("My Skills")}</p>
         <p className="my-8 m-auto text-justify lg:w-[60%]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
-          incidunt aut tempora unde dolore quia provident explicabo rem eum
-          repudiandae, nihil aliquid autem facere ullam! Atque iure accusantium
-          tenetur ducimus.
+          {t("Skill Description")}
         </p>
 
-        <div className="grid  grid-cols-1 my-8 gap-4 lg:grid-cols-4 sm:grid-cols-2">
+        <div className="grid  grid-cols-1 my-8 gap-4 lg:grid-cols-4 sm:grid-cols-2 text-black">
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className="col-span-1 my-4 shadow-2xl border-[1px]  p-8"
+              className="col-span-1 my-4 shadow-2xl border-[1px] bg-[#c6c9cf] rounded-xl p-8"
             >
               <img
                 src={skill.imgUrl}
@@ -35,13 +34,8 @@ const Skills = () => {
           <i className="text-5xl absolute top-[-10%] lg:left-[-10%] left-[-18%]">
             <RiDoubleQuotesL />
           </i>
-          <p className="my-8">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi
-            suscipit architecto omnis ipsam nobis reprehenderit voluptate a
-            aspernatur aut explicabo. Architecto iure veniam pariatur velit?
-            Repudiandae, sapiente laboriosam! Assumenda, optio.
-          </p>
-          <b>Unknown</b>
+          <p className="my-8 text-xl">{t("quote")}</p>
+          <b className="text-lg">Mahatma Gandhi</b>
           <i className="text-5xl absolute  top-[60%] right-[-20%] lg:top-[35%] lg:right-[-10%]">
             <RiDoubleQuotesR />
           </i>

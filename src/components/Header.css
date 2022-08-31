@@ -1,0 +1,5 @@
+#checkbox:checked + label .ball{
+  background-color: white;
+  transform: translateX(20px);
+  transition: transform 0.3s linear;
+}
