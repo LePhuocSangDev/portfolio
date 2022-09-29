@@ -41,8 +41,8 @@ const Footer = () => {
         </a>
       </div>
       <div className="font-thin text-gray-500">
-        <span>phuocsangb8@gmail.com |</span>
-        <span className="px-2">036-666-6390</span>
+        <span>phuocsang123@gmail.com |</span>
+        <span className="px-2">0123456789</span>
       </div>
       <button onClick={scrollToTop} className="button absolute p-0 right-[5px]">
         <AiOutlineArrowUp />
