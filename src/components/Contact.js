@@ -5,6 +5,7 @@ import AnimationPage from "../animation/AnimationPage";
 import { useTranslation } from "react-i18next";
 import emailjs from "emailjs-com";
 import { useState } from "react";
+import { useEffect } from "react";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -29,6 +30,9 @@ const Contact = () => {
     setSendStatus("success");
     e.target.reset();
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <AnimationPage>
       <div className="relative lg:h-screen">
