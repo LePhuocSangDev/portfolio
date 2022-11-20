@@ -17,12 +17,13 @@ const Footer = () => {
 
   return (
     <div className="flex flex-col justify-center items-center border-top-black">
-      <div className="flex text-[40px] my-4">
+      <div className="flex text-[40px] my-2">
         <a
           className="px-2"
           href="https://www.facebook.com/phuocsang.le.7
 "
           target="_blank"
+          rel="noreferrer"
         >
           <FaFacebookF />
         </a>
@@ -30,6 +31,7 @@ const Footer = () => {
           className="px-2"
           href="https://github.com/LePhuocSangDev"
           target="_blank"
+          rel="noreferrer"
         >
           <AiFillGithub />
         </a>
@@ -40,11 +42,14 @@ const Footer = () => {
           <AiOutlineTwitter />
         </a>
       </div>
-      <div className="font-thin text-gray-500">
+      <div className="font-thin text-gray-500 pb-2">
         <span>phuocsang123@gmail.com |</span>
         <span className="px-2">0123456789</span>
       </div>
-      <button onClick={scrollToTop} className="button absolute p-0 right-[5px]">
+      <button
+        onClick={scrollToTop}
+        className="button fixed bottom-[20px] p-0 right-[5px]"
+      >
         <AiOutlineArrowUp />
       </button>
     </div>

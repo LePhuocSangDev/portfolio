@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Modal from "./Modal";
 import { projects } from "../data";
 import AnimationPage from "../animation/AnimationPage";
@@ -14,6 +14,9 @@ const Work = () => {
     setShow(true);
     setProjectDetails(project);
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <AnimationPage>
@@ -28,23 +31,17 @@ const Work = () => {
             <h1 className="text-4xl py-4">
               {t("Project that I currently working on")}
             </h1>
-            <h3 className="text-2xl py-4 italic font-extrabold">
+            <h3 className="text-2xl py-4 italic font-bold">
               {currentProject.name}
             </h3>
             <p className="text-md py-4 italic font-thin text-lg">
               {lng === "en" ? currentProject.desc : currentProject.desc_vn}
             </p>
-            <button
-              onClick={() => openModal(currentProject)}
-              className="button absolute left-1/2 translate-x-[-50%]"
-            >
-              {t("See more")}
-            </button>
           </div>
         </div>
-        <div className="text-center w-screen p-8  lg:p-16">
-          <h1 className="text-4xl my-8"> {t("My project")}</h1>
-          <p className="inline-block lg:w-[50%] mt-8 mb-8 text-lg">
+        <div className="text-center w-screen p-4  lg:p-16">
+          <h1 className="text-4xl"> {t("My project")}</h1>
+          <p className="inline-block lg:w-[70%] text-justify mt-4 mb-8 text-lg">
             {t("My project description")}
           </p>
           <div className="grid lg:grid-cols-4 grid-cols-1 gap-8">

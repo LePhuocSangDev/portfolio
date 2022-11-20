@@ -3,9 +3,13 @@ import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 import { skills } from "../data";
 import AnimationPage from "../animation/AnimationPage";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 const Skills = () => {
   const { t } = useTranslation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <AnimationPage>
       <div className="text-center my-8 mx-8 lg:mx-16">
@@ -35,7 +39,7 @@ const Skills = () => {
             <RiDoubleQuotesL />
           </i>
           <p className="my-8 text-xl">{t("quote")}</p>
-          <b className="text-lg">Mahatma Gandhi</b>
+          <b className="text-lg">William Arthur Ward</b>
           <i className="text-5xl absolute  top-[60%] right-[-20%] lg:top-[35%] lg:right-[-10%]">
             <RiDoubleQuotesR />
           </i>

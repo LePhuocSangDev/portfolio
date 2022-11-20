@@ -8,75 +8,56 @@ import mg from "./asset/image/skills/mg.png";
 import node from "./asset/image/skills/node.png";
 import react from "./asset/image/skills/react.png";
 import tw from "./asset/image/skills/tw.png";
+import ts from "./asset/image/skills/ts.jpg";
 import portfolio from "./asset/image/projects/portfolio.png";
 export const projects = [
   {
-    name: "TinyZone-clone",
-    imgUrl: "https://torrentfreak.com/images/tinyzone.png",
-    desc: "asdfsfs",
-    desc_vn: "Đây là trang cá nhân của tôi",
-    tech: "",
-    features: "",
-    member: "",
+    name: "S Media",
+    imgUrl:
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    desc: "This social media site has just begun to develope. There are basic functions such as logging in, posting posts...",
+    desc_vn:
+      "Trang mạng xã hội vừa mới bắt đầu phát triển. Đã có những chứ năng cơ bản như đăng nhập, đăng bài post...",
+    tech: "React Js, SASS, Node JS, MongoDB, React Router, Redux Toolkit, Axios, TypeScript...",
+    features: "Login, Register, CRUD Post, Display Post,...",
+    member: "1",
     linkDemo: "",
     source: "",
   },
   {
-    name: "Blog",
-    imgUrl:
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80",
-    desc: "",
-    desc_vn: "Đây là trang cá nhân của tôi",
-    tech: "",
-    features: "",
-    member: "",
+    name: "TinyZone-clone",
+    imgUrl: "https://torrentfreak.com/images/tinyzone.png",
+    desc: "Build a movie website based on the website's design: https://tinyzone.to . Completed basic pages such as login, homepage, landing page and movie page",
+    desc_vn:
+      "Xây dựng website xem phim dựa trên design của trang web: https://tinyzone.to .Đã hoàn thành những trang cơ bản như đăng nhập, trang chủ, landing page và trang thông tin phim.",
+    tech: "ReactJs,Tailwind, Node JS, MongoDB...",
+    features: "Display Api Data, Responsive, Login, Register,...",
+    member: "1",
     linkDemo: "",
     source: "",
   },
   {
     name: "Personal Portfolio",
     imgUrl: portfolio,
-    desc: "This is my portfolio" || "Đây là trang cá nhân của tôi",
-    desc_vn: "Đây là trang cá nhân của tôi",
+    desc: "Build a personal website based on web-inspired design. Completed the main functions as well as adding mobile responsive",
+    desc_vn:
+      "Xây dựng trang cá nhân dựa trên thiết kế lấy cảm hứng trên mạng. Đã hoàn thành những chức năng chính, và bản thiết kế cho mobile",
     tech: "ReactJs,Tailwind, Framer Motion, React Router, Rive animation...",
-    features: "Dark Mode, Page transition, Modal, Css Grid...",
+    features: "Dark Mode, Page Transition, Modal, Css Grid...",
     member: "1",
     linkDemo: "https://lephuocsang.dev",
     source: "https://github.com/LePhuocSangDev/portfolio.git",
   },
+
   {
-    name: "Social Media App",
-    imgUrl:
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-    desc: "",
-    desc_vn: "Đây là trang cá nhân của tôi",
-    tech: "React Js, SASS, Node JS, MongoDB, React Router, Redux Toolkit, Axios,...",
-    features:
-      "Login, Register, CRUD Post, Forgot Password, update user, form validation,...",
-    member: "1",
-    linkDemo: "",
-    source: "",
-  },
-  {
-    name: "E-commercial Web",
+    name: "LPS Shoes",
     imgUrl: html,
-    desc: "",
-    desc_vn: "Đây là trang cá nhân của tôi",
-    tech: "",
-    features: "",
-    member: "",
-    linkDemo: "",
-    source: "",
-  },
-  {
-    name: "Chess game",
-    imgUrl:
-      "https://images.unsplash.com/photo-1538221566857-f20f826391c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80",
-    desc: "",
-    desc_vn: "Đây là trang cá nhân của tôi",
-    tech: "",
-    features: "",
-    member: "",
+    desc: "Website selling shoes with beautiful interface, management page and full function. Combination of React Js and Node Js as well as other technologies. In the process of fixing minor bugs and will be completed soon in the future",
+    desc_vn:
+      "Trang web bán giày với giao diện đẹp mắt, có trang quản lý và đầy đủ chức năng. Kết hợp giữa React Js và Node Js cũng như những công nghệ khác. Đang trong quá trình xử lý những lỗi nhỏ và sẽ sớm hoàn thiện trong tương lai",
+    tech: "React Js, SASS, Node JS, MongoDB, React Router, Redux Toolkit, Axios,...",
+    features: "Login, CRUD Product, Add to cart, Check out, Admin Dashboard...",
+    member: "1",
     linkDemo: "",
     source: "",
   },
@@ -91,7 +72,7 @@ export const skills = [
     imgUrl: css,
   },
   { name: "SASS", imgUrl: sass },
-  { name: "BootStrap", imgUrl: bt },
+  { name: "TypeScript", imgUrl: ts },
 
   {
     name: "Tailwind CSS",

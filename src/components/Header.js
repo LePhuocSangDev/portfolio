@@ -27,13 +27,13 @@ const Header = () => {
   };
   return (
     <div
-      className={`flex h-[80px] bg-white dark:bg-black border-bottom-black text-[20px] justify-end  lg:justify-between sticky top-0 left-0 right-0  z-10 border-top-black`}
+      className={`flex h-[80px] bg-white dark:bg-black border-bottom-black text-[20px] justify-between sticky top-0 left-0 right-0  z-10 border-top-black`}
     >
-      <Link className="max-w-xs w-[20vw] hidden lg:block" to="/">
+      <Link className="max-w-xs w-[20vw] max-w-[200px] hidden lg:block" to="/">
         <img className=" h-full border-right-black w-full" src={logo} alt="" />{" "}
       </Link>
-      <div className="flex">
-        <ul className="justify-evenly items-center hidden lg:flex">
+      <div className="lg:flex hidden">
+        <ul className="justify-evenly items-center hidden lg:flex ">
           <li className={`p-4 hover:opacity-30`}>
             <NavLink
               className={({ isActive }) =>
@@ -95,48 +95,48 @@ const Header = () => {
             </NavLink>
           </li>
         </ul>
-        {showMenu || (
-          <>
-            <div className="flex justify-end items-center space-x-2 mx-auto relative mr-4">
-              <span className="text-md font-extralight">
-                <BsSun />{" "}
-              </span>
-              <div>
-                <input
-                  ref={checkboxRef}
-                  onClick={toggleDarkMode}
-                  type="checkbox"
-                  name=""
-                  id="checkbox"
-                  className="hidden"
-                />
-                <label htmlFor="checkbox" className="cursor-pointer">
-                  <div className="w-9 h-5 flex items-center bg-gray-300 rounded-full p2">
-                    <div className="w-4 h-4 bg-white rounded-full shadow ball"></div>
-                  </div>
-                </label>
-              </div>
-              <span className="text-md font-semibold">
-                <BsMoon />
-              </span>
-            </div>
-
-            <select
-              defaultValue={lng}
-              className="bg-transparent cursor-pointer text-sm outline-none"
-              onChange={(e) => handleChangeLng(e.target.value)}
-            >
-              <option className="dark:text-black" value="en">
-                {t("English")}
-              </option>
-              <option className="dark:text-black" value="vn">
-                {" "}
-                {t("Vietnamese")}
-              </option>
-            </select>
-          </>
-        )}
       </div>
+      {showMenu || (
+        <div className="flex justify-self-start pl-4 lg:p-0">
+          <div className="flex justify-end items-center space-x-2 mx-auto relative mr-4">
+            <span className="text-md font-extralight">
+              <BsSun />{" "}
+            </span>
+            <div>
+              <input
+                ref={checkboxRef}
+                onClick={toggleDarkMode}
+                type="checkbox"
+                name=""
+                id="checkbox"
+                className="hidden"
+              />
+              <label htmlFor="checkbox" className="cursor-pointer">
+                <div className="w-9 h-5 flex items-center bg-gray-300 rounded-full p2">
+                  <div className="w-4 h-4 bg-white rounded-full shadow ball"></div>
+                </div>
+              </label>
+            </div>
+            <span className="text-md font-semibold">
+              <BsMoon />
+            </span>
+          </div>
+
+          <select
+            defaultValue={lng}
+            className="bg-transparent cursor-pointer hover:opacity-50 text-[16px] outline-none w-[95px] mr-2"
+            onChange={(e) => handleChangeLng(e.target.value)}
+          >
+            <option className="dark:text-black" value="en">
+              {t("English")}
+            </option>
+            <option className="dark:text-black" value="vn">
+              {" "}
+              {t("Vietnamese")}
+            </option>
+          </select>
+        </div>
+      )}
 
       {/*  mobile device */}
 
@@ -150,47 +150,47 @@ const Header = () => {
         </a>
       )}
       {showMenu && (
-        <div className="flex h-screen z-10 w-screen bg-slate-500 relative sm:text-4xl">
+        <div className="flex h-screen z-10 w-screen bg-slate-500 relative sm:text-2xl">
           <ul className="w-full text-center mt-16">
-            <li className="lg:py-4  lg:px-4 py-8 hover:bg-slate-300">
+            <li className="lg:py-4  lg:px-4  hover:bg-slate-300">
               <NavLink
-                className="w-full h-full block"
+                className="w-full h-full block py-8"
                 onClick={() => setShowMenu(false)}
                 to="/"
               >
                 {t("Home")}
               </NavLink>
             </li>
-            <li className="lg:py-4 lg:px-4 py-8 hover:bg-slate-300">
+            <li className="lg:py-4 lg:px-4  hover:bg-slate-300">
               <NavLink
-                className="w-full h-full block"
+                className="w-full h-full block py-8"
                 onClick={() => setShowMenu(false)}
                 to="/about"
               >
                 {t("About")}
               </NavLink>
             </li>
-            <li className="lg:py-4 lg:px-4 py-8 hover:bg-slate-300">
+            <li className="lg:py-4 lg:px-4 hover:bg-slate-300">
               <NavLink
-                className="w-full h-full block"
+                className="w-full h-full block py-8"
                 onClick={() => setShowMenu(false)}
                 to="/work"
               >
                 {t("Work")}
               </NavLink>
             </li>
-            <li className="lg:py-4 lg:px-4 py-8 hover:bg-slate-300">
+            <li className="lg:py-4 lg:px-4 hover:bg-slate-300">
               <NavLink
-                className="w-full h-full block"
+                className="w-full h-full block py-8"
                 onClick={() => setShowMenu(false)}
                 to="/skills"
               >
                 {t("Skills")}
               </NavLink>
             </li>
-            <li className="lg:py-4 lg:px-4 py-8 hover:bg-slate-300">
+            <li className="lg:py-4 lg:px-4  hover:bg-slate-300">
               <NavLink
-                className="w-full h-full block"
+                className="w-full h-full block py-8"
                 onClick={() => setShowMenu(false)}
                 to="/contact"
               >
