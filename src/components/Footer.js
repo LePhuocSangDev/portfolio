@@ -43,8 +43,8 @@ const Footer = () => {
         </a>
       </div>
       <div className="font-thin text-gray-500 pb-2">
-        <span>phuocsang123@gmail.com |</span>
-        <span className="px-2">0123456789</span>
+        <span>phuocsangb82@gmail.com |</span>
+        <span className="px-2">0399597879</span>
       </div>
       <button
         onClick={scrollToTop}

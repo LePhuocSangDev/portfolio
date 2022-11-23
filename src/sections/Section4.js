@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import img2 from "../asset/image/sections/img2.jpg";
+import img3 from "../asset/image/sections/contact.jpg";
 import { useTranslation } from "react-i18next";
 
 const Section4 = () => {
@@ -20,9 +20,9 @@ const Section4 = () => {
         </Link>
       </div>
       <img
-        src={img2}
+        src={img3}
         alt="/"
-        className="col-span-4 h-full hidden lg:block"
+        className="col-span-4 h-full hidden object-cover lg:block"
       ></img>
     </div>
   );

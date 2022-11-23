@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import img1 from "../asset/image/img1.jpg";
+import img2 from "../asset/image/sections/img2.jpg";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { projects } from "../data";
@@ -44,9 +44,9 @@ const Section2 = () => {
   return (
     <div className="grid grid-cols-11 h-screen border-bottom-black text-center">
       <img
-        src={img1}
+        src={img2}
         alt="/"
-        className="col-span-3 border-right-black h-full hidden lg:block"
+        className="col-span-3 border-right-black h-full hidden lg:block object-cover object-top"
       ></img>
       <div className="col-span-11 lg:col-span-5 border-right-black relative ">
         <h2 className=" mt-8">{t("Work")}</h2>
@@ -71,11 +71,11 @@ const Section2 = () => {
           {t("See more")}
         </Link>
       </div>
-      <div className="lg:col-span-3 h-full w-full hidden lg:block">
+      <div className="lg:col-span-3 h-full hidden lg:block">
         <img
           alt="/"
           src={projects[currentIndex].imgUrl}
-          className="w-full h-full"
+          className="w-full h-full object-contain"
         ></img>
       </div>
     </div>

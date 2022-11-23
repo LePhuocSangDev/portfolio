@@ -53,10 +53,10 @@ const Contact = () => {
                 </p>
                 <div className="flex flex-col my-4 lg:justify-between lg:flex-row ">
                   <span className="my-4 lg:my-6">
-                    Email <br /> <span>phuocsang123@gmail.com</span>
+                    Email <br /> <span>phuocsangb82@gmail.com</span>
                   </span>
                   <span className="my-4 lg:my-6">
-                    {t("Phone")} <br /> <span>0123468731</span>
+                    {t("Phone")} <br /> <span>0399597879</span>
                   </span>
                 </div>
                 <div className="my-4">

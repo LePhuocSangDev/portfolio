@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Hello } from "../animation/RiveAnimation";
 import { useTranslation } from "react-i18next";
+import welcome from "../asset/image/sections/welcome.jpg";
 
 const Section1 = () => {
   const { t } = useTranslation();
@@ -23,8 +24,8 @@ const Section1 = () => {
         </Link>
       </div>
       <img
-        className="col-span-3 h-full hidden lg:block aspect-video"
-        src="https://media.giphy.com/media/3o6UBpHgaXFDNAuttm/giphy.gif"
+        className="col-span-3 h-full hidden lg:block object-cover"
+        src={welcome}
         alt=""
       />
     </div>

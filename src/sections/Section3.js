@@ -2,6 +2,7 @@ import React from "react";
 import { AiOutlineCheck } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import img2 from "../asset/image/sections/img2.jpg";
 
 const Section3 = () => {
   const { t } = useTranslation();
@@ -16,8 +17,8 @@ const Section3 = () => {
       </div>
       <img
         alt="/"
-        src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2tpbGxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-        className="col-span-4 border-right-black h-full hidden lg:block"
+        src={img2}
+        className="col-span-4 border-right-black object-cover h-full hidden lg:block"
       ></img>
       <div className="lg:col-span-3 lg:h-screen text-white bg-black font-thin relative lg:p-4">
         <h2 className="text-center pt-4 pb-2">{t("Skills")}</h2>
