@@ -3,6 +3,7 @@ import { AiOutlineArrowDown } from "react-icons/ai";
 import mypicture from "../asset/image/mypicture.jpg";
 import AnimationPage from "../animation/AnimationPage";
 import { useTranslation } from "react-i18next";
+import mycv from "../asset/cv/cv.pdf";
 
 const About = () => {
   const { t } = useTranslation();
@@ -22,9 +23,8 @@ const About = () => {
               <p className="mt-8 lg:mt-0">{t("about-desc")}</p>
               <p className="mt-4">{t("about-desc2")}</p>
               <a
-                href="https://docs.google.com/document/d/19_NUaD0ZZKMrb_OoeirL0OJye_5HHNdg/edit?usp=sharing&ouid=114283264621852541885&rtpof=true&sd=true"
-                target="_blank"
-                rel="noreferrer"
+                href={mycv}
+                download="Resume"
                 className="bg-[#5A7A81] inline-flex justify-center items-center px-4 py-2 text-white my-2 w-full lg:justify-between lg:w-[180px] mt-8"
               >
                 {t("Download CV")}

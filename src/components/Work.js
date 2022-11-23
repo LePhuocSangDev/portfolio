@@ -34,7 +34,7 @@ const Work = () => {
             <h3 className="text-2xl py-4 italic font-bold">
               {currentProject.name}
             </h3>
-            <p className="text-md py-4 italic font-thin text-lg">
+            <p className="text-md py-4 italic font-normal text-lg">
               {lng === "en" ? currentProject.desc : currentProject.desc_vn}
             </p>
           </div>
