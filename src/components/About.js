@@ -1,6 +1,6 @@
 import React from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
-import mypicture from "../asset/image/mypicture.jpg";
+import mypicture from "../asset/image/mypicture.png";
 import AnimationPage from "../animation/AnimationPage";
 import { useTranslation } from "react-i18next";
 import mycv from "../asset/cv/cv.pdf";
